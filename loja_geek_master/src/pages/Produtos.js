@@ -13,7 +13,7 @@ export default function Produtos() {
     const [produtos, setProdutos] = useState([]);
 
     useEffect(async () => {
-        const resposta = await fetch("http://localhost/projetoreact/API/API_loja_geek_master-main/API/api/")
+        const resposta = await fetch("http://localhost/projetoreact/API/API_loja_geek_master-main/API/api/produtos.php")
         const dados = await resposta.json()
         setProdutos(dados);
     }, []);
